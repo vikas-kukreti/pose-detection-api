@@ -1,0 +1,50 @@
+# @base=http://localhost:8080/
+@base=http://api.asha-vision.com/
+
+### register a user
+POST {{base}}auth/register
+Content-Type: application/json
+
+{
+    "name": "test 2",
+    "age": "10",
+    "gender": "Male",
+    "weight": "60",
+    "height": "175",
+    "email": "test2@abc.com",
+    "password": "test1234"
+}
+
+### login
+POST {{base}}auth/login
+Content-Type: application/json
+
+{
+    "email": "test@abc.com",
+    "password": "test1234"
+}
+
+### get uploaded images for user
+GET {{base}}auth/uploads?userId=1
+
+### get all uploaded
+GET {{base}}auth/uploads/all
+
+###
+POST {{base}}upload/iamge?userId=1
+Content-Type: multipart/form-data;boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="video"; filename="1kajdlkvjalskdvnlkasdljalksdjvlkasdvlk.mp4"
+Content-Type: application/octet-stream
+
+< .\movie.mp4
+--MyBoundary
+Content-Disposition: form-data; name="city"
+
+Test
+--MyBoundary
+Content-Disposition: form-data; name="remarks"
+
+Testing large file uploads
+--MyBoundary--

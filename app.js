@@ -1,0 +1,2 @@
+// startup file
+require("./src")

@@ -1,0 +1,22 @@
+{
+  "name": "pose-detection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config"
+  },
+  "author": "Vikas Kukreti (vickydvlpr@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "busboy": "^0.3.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
